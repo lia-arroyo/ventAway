@@ -1,8 +1,11 @@
+import TextField from "./components/TextField";
+import "./styles/app.scss";
+
 function App() {
   return (
     <div className="App">
-      This is a create react app template, with the unneccessary stuff removed
-      and with typescript.
+      <p>vent away...</p>
+      <TextField />
     </div>
   );
 }
