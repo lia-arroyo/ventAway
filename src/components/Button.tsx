@@ -5,7 +5,7 @@ export const Button = (
 ) => {
   return (
     <button className="throw-btn" {...buttonProps}>
-      throw it away
+      chuck it into the void
     </button>
   );
 };
