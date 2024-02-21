@@ -3,9 +3,10 @@ import "./styles/app.scss";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <p>vent away...</p>
       <TextField />
+      <button className="throw-btn">throw it away</button>
     </div>
   );
 }

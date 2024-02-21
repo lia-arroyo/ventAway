@@ -6,6 +6,15 @@
   font-family: "Courier Prime", monospace;
 }
 
-p {
-  font-size: 2em;
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    font-size: 2em;
+  }
+
+  .throw-btn {
+  }
 }
