@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../styles/textfield.scss";
 import { TIMEOUT_DURATION } from "../utils/consts";
 
 const TextField = ({ isButtonClicked }: { isButtonClicked: boolean }) => {
   const [text, setText] = useState<string>("");
+  const ref = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
-    isButtonClicked && setTimeout(() => setText(""), TIMEOUT_DURATION);
+    if (isButtonClicked) {
+      setTimeout(() => setText(""), TIMEOUT_DURATION);
+      ref.current?.focus();
+    }
   }, [isButtonClicked]);
 
   return (
@@ -16,6 +20,7 @@ const TextField = ({ isButtonClicked }: { isButtonClicked: boolean }) => {
       rows={17}
       value={text}
       onChange={(e) => setText(e.target.value)}
+      ref={ref}
     />
   );
 };
