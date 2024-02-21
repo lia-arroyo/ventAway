@@ -1,3 +1,4 @@
+import { Button } from "./components/Button";
 import TextField from "./components/TextField";
 import "./styles/app.scss";
 
@@ -6,7 +7,7 @@ function App() {
     <div className="app">
       <p>vent away...</p>
       <TextField />
-      <button className="throw-btn">throw it away</button>
+      <Button />
     </div>
   );
 }
